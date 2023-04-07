@@ -1,12 +1,8 @@
 package com.bridgelabz.linkedlistproblem;
 
-import java.util.LinkedList;
+import java.util.*;
 
 public class LinkedListProblem {
-
-	void popLast(LinkedList<Integer> linkedlist) {
-		linkedlist.pollLast();
-	}
 
 	public static void main(String[] args) {
 
@@ -18,11 +14,12 @@ public class LinkedListProblem {
 		linkedlist.add(30);
 		linkedlist.add(70);
 
-		System.out.println(linkedlist);
-
-		linkedlistproblem.popLast(linkedlist);
-
-		System.out.println("After deleting last element:");
+		Iterator iterator = linkedlist.iterator();
+		while (iterator.hasNext()) {
+			Integer i = (Integer) iterator.next();
+			if (i == 30)
+				System.out.println("Element is present");
+		}
 		System.out.println(linkedlist);
 
 	}
