@@ -8,8 +8,8 @@ public class LinkedListProblem {
 		LinkedList<Integer> list = new LinkedList<Integer>();
 
 		list.add(56);
-		list.addLast(30);
-		list.addLast(70);
+		list.add(70);
+		list.add(1,30);
 
 		System.out.println(list);
 
