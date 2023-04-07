@@ -14,11 +14,16 @@ public class LinkedListProblem {
 		linkedlist.add(30);
 		linkedlist.add(70);
 
-		Iterator iterator = linkedlist.iterator();
+		System.out.println(linkedlist);
+
+		ListIterator iterator = linkedlist.listIterator();
+
 		while (iterator.hasNext()) {
 			Integer i = (Integer) iterator.next();
-			if (i == 30)
-				System.out.println("Element is present");
+			if (i == 30) {
+				iterator.add(40);
+				System.out.println("After adding value 40");
+			}
 		}
 		System.out.println(linkedlist);
 
